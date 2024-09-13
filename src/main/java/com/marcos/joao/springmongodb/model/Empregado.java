@@ -3,10 +3,13 @@ package com.marcos.joao.springmongodb.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Document(collection="empregados")
 public class Empregado {
 	
 	@Id
+	@Schema(hidden = true)
 	private String id;
 	
 	private String nome;
